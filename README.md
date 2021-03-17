@@ -1,5 +1,12 @@
 # DongleScope
 
+## Notes about this fork
+
+DongleScope was difficult to setup, especially since python2 is no longer supported on many systems.
+I added "setup.sh" and fixed a few things so that people can set things up easily on Ubuntu 20.04.
+
+## What is DongleScope?
+
 DongleScope is an automatic tool for detecting vulnerabilities on OBD-II dongles. With DongleScope, you can perform a few tests of an OBD-II (Wi-Fi, Bluetooth, or Bluetooth Low Energy (BLE) based) dongle on a real automobile, including:
 
 1. Read test. Reading VIN from a vehicle using diagnostics [PIDs](https://en.wikipedia.org/wiki/OBD-II_PIDs).

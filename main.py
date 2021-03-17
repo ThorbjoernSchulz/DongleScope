@@ -3,6 +3,7 @@ from settings import *
 from bluetooth import *
 import pyble
 from OBDPeripheral import MyPeripheral
+import socket
 
 # query dongle configuration with dongle index
 dongle = 1
