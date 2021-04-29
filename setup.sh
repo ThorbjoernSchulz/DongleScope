@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # install necessary packages
-sudo apt install curl python2 python2-dev libbluetooth-dev
+sudo apt install -y curl python2 python2-dev libbluetooth-dev
 
 # do we have pip? if not, install
 pip2 --version
@@ -10,6 +10,7 @@ pip2 --version
 	python2 get-pip.py
 }
 
+source $HOME/.profile
 pip2 install -r requirement.txt
 
 [[ $? -ne 0 ]] && exit
@@ -17,4 +18,5 @@ pip2 install -r requirement.txt
 # comment out documentation. weird bug otherwise
 PYTHON_USER_LIBRARY_PATH=$HOME/.local/lib/python2.7/site-packages
 sed -i '51,$ s/^/#/' $PYTHON_USER_LIBRARY_PATH/bluetooth/__init__.py
+rm -f $PYTHON_USER_LIBRARY_PATH/bluetooth/*.pyc
 
